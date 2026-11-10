@@ -1,0 +1,38 @@
+name: Bug report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What did you expect instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Upload a PDF to a new knowledge base
+        2. Generate 5 questions with keyword "..."
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Provider / model configuration
+      description: Relevant `.env` values (redact API keys) — LLM_PROVIDER, LLM_MODEL, RETRIEVAL_MODE, COVE_ENABLED, etc.
+      render: bash
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Commit / version
+    validations:
+      required: false

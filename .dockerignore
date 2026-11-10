@@ -1,0 +1,17 @@
+.venv
+.git
+.github
+.pytest_cache
+.mypy_cache
+.ruff_cache
+__pycache__
+**/__pycache__
+*.pyc
+data
+app/logging/*.jsonl
+app/logging/*.csv
+web
+docs
+tests
+*.md
+!README.md
